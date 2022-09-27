@@ -4,10 +4,10 @@ This is a Django project
 
 ## Installation
 
-Use this to install the Django Project.
+Use this to install Django
 
 ```bash
-django-admin startproject <name of the project>
+python -m pip install Django
 ```
 
 ## Usage
