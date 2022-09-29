@@ -1,4 +1,4 @@
-# Django CRUD
+# Django MVC
 
 This is a Django project
 
