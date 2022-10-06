@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h3>Los 5 primeros email de autores a partir del 5º</h3>
+        <ul>
+            {% for offset in offsets %}
+            <li>{{ offset.id }} - ({{offset.email}})</li>
+            {% endfor %}    
+        </ul>
+        <h3>Los 10 primeros email de autores</h3>
+        <ul>
+            {% for limit in limits %}
+            <li>{{ limit.id }} - ({{limit.email}})</li>
+            {% endfor %}    
+        </ul>
+
+        <h3>Autor filtrado por id: 1</h3>
+        <p>{{author}}</p>
+
+        <h3>Autor con email ryan24@example.org</h3>
+        <ul>
+            {% for elm in filtered %}
+            <li>{{ elm.name }} | {{elm.email}}</li>
+            {% endfor %}    
+        </ul>
+
+        <h3>Todos los autores</h3>
+        <ul>
+            {% for author in authors %}
+            <li>{{ author.name }} ({{author.email}})</li>
+            {% endfor %}    
+        </ul>
+        <h3>Total de autores: {{ authors|length }}</h3>
+    
+    </body>
+</html>

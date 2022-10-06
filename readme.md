@@ -27,6 +27,9 @@ python manage.py check <name of the app>
 python manage.py makemigrations
 python manage.py migrate
 
+# I will use django-seed to seed the database with fake information. This is the github of the library
+https://github.com/Brobin/django-seed
+
 # to init the server
 python manage.py runserver
 
