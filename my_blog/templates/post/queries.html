@@ -7,6 +7,24 @@
         <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
+        <h3>Elementos filtrados por nombre que contienen palabra "yes"</h3>
+        <ul>
+            {% for filter in filtered3 %}
+            <li>{{ filter.name }}</li>
+            {% endfor %}    
+        </ul> 
+        <h3>Elementos filtrados por id menor o igual a 15</h3>
+        <ul>
+            {% for filter in filtered2 %}
+            <li>{{ filter.email }}</li>
+            {% endfor %}    
+        </ul> 
+        <h3>Elementos ordenados por email</h3>
+        <ul>
+            {% for order in organized %}
+            <li>{{ order.email }}</li>
+            {% endfor %}    
+        </ul> 
         <h3>Los 5 primeros email de autores a partir del 5º</h3>
         <ul>
             {% for offset in offsets %}
