@@ -1,7 +1,15 @@
 import email
 from django.shortcuts import render
+from django.http import HttpResponse
 from .models import Author, Entry
 # Create your views here.
+
+def update(request):
+    author = Author.objects.get(id=1)
+    author.name = "Juanjo"
+    author.email ="juanjo@demo.com"
+    author.save()
+    return HttpResponse("Modificado")
 
 def queries(request):
     # get all the elements
