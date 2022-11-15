@@ -33,8 +33,11 @@ https://github.com/Brobin/django-seed
 # to init the server
 python manage.py runserver
 
-```
 
+# to create a superuser for Django Admin Panel
+python manage.py createsuperuser
+
+```
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
