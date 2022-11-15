@@ -17,3 +17,10 @@ class ContacForm(forms.Form):
     message = forms.CharField(
         label="Mensaje",
         widget=forms.Textarea(attrs={'class': 'form-control'}))
+
+    def clean_name(self):
+        name = self.cleaned_data.get("name")  
+        if name != "Open":
+            raise forms.ValidationError("Tan solo el valor Open está permitido para este campo")
+        else:      
+            return name
