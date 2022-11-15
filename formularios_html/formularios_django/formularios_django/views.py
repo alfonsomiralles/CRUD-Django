@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .forms import CommentForm
+from .forms import CommentForm, ContacForm
 
 def form(request):
     comment_form = CommentForm({'name': 'Alfonso', 'url': 'https://as.com', 'comment': 'comentario'})
@@ -11,3 +11,7 @@ def goal(request):
         return HttpResponse("Método no permitido")
 
     return HttpResponse(request.GET['name'])
+
+def widget(request):
+    form = ContacForm()
+    return render(request, 'widget.html', {'form': form})    
