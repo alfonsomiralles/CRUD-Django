@@ -13,5 +13,13 @@ def goal(request):
     return HttpResponse(request.GET['name'])
 
 def widget(request):
-    form = ContacForm()
-    return render(request, 'widget.html', {'form': form})    
+    if request.method == 'GET':
+        form = ContacForm()
+        return render(request, 'widget.html', {'form': form}) 
+
+    if request.method == 'POST':
+        form = ContacForm(request.POST)
+        if form.is_valid():
+            return HttpResponse("Válido")
+        else:
+            return render(request, 'widget.html', {'form': form})      
