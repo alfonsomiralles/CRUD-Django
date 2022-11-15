@@ -5,4 +5,15 @@ class CommentForm(forms.Form):
     url = forms.URLField(label = "Tu sitio web", required=False, initial='https://')
     comment = forms.CharField()
 
-
+class ContacForm(forms.Form):
+    name = forms.CharField(
+        label="Nombre", 
+        max_length=50,
+        widget=forms.TextInput(attrs={'class': 'form-control'}))
+    email = forms.EmailField(
+        label="Email", 
+        max_length=50,
+        widget=forms.EmailInput(attrs={'class': 'form-control'}))
+    message = forms.CharField(
+        label="Mensaje",
+        widget=forms.Textarea(attrs={'class': 'form-control'}))
