@@ -5,4 +5,5 @@ class ContactForm(ModelForm):
     class Meta:
         model = Contact
         exclude = ('date',)
+        
   

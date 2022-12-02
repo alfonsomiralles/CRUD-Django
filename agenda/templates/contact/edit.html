@@ -1,6 +1,6 @@
 {% extends 'layout/base.html' %}
  
-{% block 'title' %}Crear Tarea{% endblock 'title' %}
+{% block 'title' %}Editar Contacto{% endblock 'title' %}
 
 {% block 'styles' %}
     {% load static %}
@@ -17,8 +17,8 @@
     </ul>
     {% endif %}
 
-    <span class="aux-btns-form"><a href="{% url 'todo' %}">Volver atrás</a></span>
-    <form action="{% url 'todo_create' %}" method="POST">
+    <span class="aux-btns-form"><a href="{% url 'contact' %}">Volver atrás</a></span>
+    <form action="{% url 'contact_edit' id=id %}" method="POST">
         {% csrf_token %}
         <table>
             {{ form.as_table }}
