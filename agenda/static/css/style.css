@@ -159,5 +159,36 @@ main {
     text-decoration: none;
 }
 
+.alert-success {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+
+}
 
 /* End Layout settings */
+
+/* iNDEX */
+.cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    background-color: var(--color-primary);
+    text-decoration: none;
+}
+
+.card:hover {
+    background-color: var(--color-text);
+}
+/* END INDEX */
