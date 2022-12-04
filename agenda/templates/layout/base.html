@@ -11,10 +11,19 @@
 </head>
 <body>
     {% include 'layout/partials/menu.html' %}
+    {% if messages %}
+		{% for message in messages %}
+		<div class="notification {{ message.tags}}">
+			{{ message }}
+		</div>
+		{% endfor %}
+	{% endif %}
     <main>
         {% block 'content' %}
         {% endblock  %}
     </main>
-    {% block 'scripts' %}{% endblock  %}
+    {% block 'scripts' %}
+    
+    {% endblock  %}
 </body>
 </html>
